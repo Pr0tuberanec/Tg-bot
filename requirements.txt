@@ -1,0 +1,4 @@
+asyncio
+aiogram==2.20
+aiosqlite
+python-dotenv==0.20.0

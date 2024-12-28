@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  bot:
+    build: .
+    secrets:
+      - bot_token
+    environment:
+      BOT_TOKEN_FILE: /run/secrets/bot_token
+    volumes:
+      - db_data:/data
+
+secrets:
+  bot_token:
+    file: ./bot_token_secret
+
+volumes:
+  db_data:
